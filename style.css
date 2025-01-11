@@ -1,0 +1,166 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@300;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1279b5d2, #8e87eb,#2ccae6);
+    background-size: 300% 300%;
+    animation: gradientBackground 6s ease infinite;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.stopwatch-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    height: 200px;
+}
+
+.stopwatch {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 20px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 2px 15px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    text-align: center;
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #243979;
+    text-shadow: 0 4px 6px rgba(165, 164, 164, 0.6), 0 0 10px #6dd5fa;
+}
+
+.display {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 0 20px #6dd5fa;
+    margin: 20px 0;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 0 10px #6dd5fa;
+    }
+
+    to {
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 0 20px #6dd5fa;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 15px rgba(91, 134, 229, 0.6);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 0 25px rgba(91, 134, 229, 0.8);
+}
+
+#start {
+    background: linear-gradient(135deg, #1abd91, #639a8c);
+}
+
+#pause {
+    background: linear-gradient(135deg, #f88417, #f368e0);
+}
+
+#reset {
+    background: linear-gradient(135deg, #ff6b6b, #ee5253);
+}
+#lap {
+    background: linear-gradient(135deg, #748ad7, #1272f1);
+}
+.lap-section {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.lap-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color:#333;
+}
+
+#laps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(128, 127, 127, 0.5) transparent;
+}
+
+#laps li {
+    background: #d1eff8;
+    margin: 5px 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #333;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#laps li:hover {
+    background: #ececec;
+}
+
+@media (max-width: 600px) {
+    .stopwatch {
+        padding: 15px;
+    }
+
+    .display {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
