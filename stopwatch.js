@@ -1,4 +1,4 @@
-// script.js
+//stopwatch.js
 let startTime = 0;
 let elapsedTime = 0;
 let timerInterval;
